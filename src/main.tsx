@@ -3,7 +3,9 @@ import App from './App.tsx'
 import './index.sass'
 
 import { Provider } from 'react-redux'
-import { store } from './redux/store.ts'
+import { setupStore } from './redux/store.ts'
+
+const store = setupStore()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<Provider store={store}>
